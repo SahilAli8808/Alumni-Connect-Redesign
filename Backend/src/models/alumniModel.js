@@ -12,16 +12,16 @@ const AlumniSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    collegeId : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'College',
-        required: true
-    },
-    adminId:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Admin',
-        required: true
-    },
+    // collegeId : {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'College',
+    //     required: true
+    // },
+    // adminId:{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Admin',
+    //     required: true
+    // },
     startYear:{
         type: Number,
         required: true
