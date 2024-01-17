@@ -12,6 +12,10 @@ const AlumniSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    role:{
+        type: String,
+        default: 'alumni'
+    },
     // collegeId : {
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'College',

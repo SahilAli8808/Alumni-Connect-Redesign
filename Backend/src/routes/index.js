@@ -3,6 +3,8 @@ const express =  require('express');
 const router = express.Router();
 
 const registerRoute = require('./registerRoute');
+const loginRoute = require('./loginRoute');
+const alumniListRoute = require('./alumniListRoute');
 
 
 router.get('/', (req, res) => {
@@ -12,6 +14,9 @@ router.get('/', (req, res) => {
 
 
 router.use('/alumni', registerRoute);
+console.log("registerRoute");
+router.use('/auth', loginRoute);
+router.use('/', alumniListRoute);
 // router.use('/', Route);
 
 
