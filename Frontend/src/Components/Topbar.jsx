@@ -41,7 +41,7 @@ function Topbar() {
         <a href="/verify-alumni" className="text-sm flex items-center">
           <FaUserGraduate className="mr-1" /> Verify Alumni
         </a>
-        <a href="/login" className="bg-blue-800 text-white px-4 py-2 rounded-md text-sm font-medium">
+        <a href="/login" className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium">
            Login
         </a>
       </nav>

@@ -5,6 +5,7 @@ import Topbar from './Components/Topbar'
 import HomeCard from './Components/HomeCard'
 import Navbar from './Components/Navbar'
 import Login from './pages/Login'
+import Slidebar from './Components/Slidebar'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       {/* <Navbar/> */}
       <Topbar/>
     <Login/>
+    <Slidebar/>
     {/* <Home/> */}
      {/* <HomeCard/> */}
      
