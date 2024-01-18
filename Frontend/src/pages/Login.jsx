@@ -9,6 +9,7 @@ import axios from 'axios';
 import {login} from '../features/authSlice'
 import {useNavigate} from 'react-router-dom'
 import { useDispatch } from 'react-redux';
+import Loader from '../Components/Loader';
 
 
 
@@ -71,8 +72,13 @@ function Login() {
           navitage("/dashboard")
 
         }catch(err){
+          setLoading(false)
           console.log("Handle error here:",err)
-          toast.error(err.response.data.message)
+          if(err.response){
+            toast.error(err.response.data.errorMessage || err.message);
+        } else {
+            toast.error(err.message + "! Please check your connection")
+        }
         }
     
     
@@ -130,6 +136,7 @@ function Login() {
             <div>
             <label htmlFor="role" className="sr-only">Role</label>
             <Select
+            required
               id="role"
               name="role"
               options={roleOptions}
@@ -150,11 +157,12 @@ function Login() {
           <div>
             <button
               type="submit"
+              disabled={loading}
               // onSubmit={handleSubmit}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className={`${loading && 'hover:cursor-wait' } group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
             
             >
-              Sign in
+              {loading ? <Loader text={"Please Wait.."}/> : "Sign In"}
             </button>
           </div>
 
