@@ -3,13 +3,12 @@ This repo is the modified version of our mini project.
 
 ## Getting Started
 <!-- Sreenshot -->
-![Screenshot]()
+![Screenshot](https://github.com/SahilAli8808/Alumni-Connect/blob/main/Frontend/src/assets/img/screenshots.jpg)
 <!-- Sreenshot -->
 ### Prerequisites
 * [Node.js](https://nodejs.org/en/download/)
 * [MongoDB](https://www.mongodb.com/download-center/community)
 * [Git](https://git-scm.com/downloads)
-
 ### Installation
 1. Clone the repo
 ```sh
