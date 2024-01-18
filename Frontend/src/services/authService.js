@@ -8,18 +8,19 @@ function getUserData(){
             state.currectUser
         }
     )
-
+console.log(currectUser)
     return currectUser
 }
 
 function getLoggedIn(){
-    console.log("getLoggedIn")
+ 
   const loggedIn = useSelector(
         // iske andar state ki current value aati hai
         (state)=>{
             state.loggedIn
         }
     )
+    console.log(loggedIn)
 
     return loggedIn
 }
