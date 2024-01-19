@@ -37,8 +37,8 @@ function Topbar() {
         <Link to="/jobs" className="text-sm font-semibold  flex items-center">
           <FaBriefcase className="mr-1" /> Jobs
         </Link>
-        <Link to="/news" className="text-sm font-semibold  flex items-center">
-          <FaNewspaper className="mr-1" /> News
+        <Link to="/newsletter" className="text-sm font-semibold  flex items-center">
+          <FaNewspaper className="mr-1" /> Newsletters
         </Link>
         <Link to="/bulk-upload" className="text-sm font-semibold  flex items-center">
           <FaUpload className="mr-1" /> Bulk Upload
