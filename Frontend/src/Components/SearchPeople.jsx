@@ -20,7 +20,7 @@ const SearchPeople = () => {
 
   return (
     <div className="max-w-md mx-auto my-2 p-6 ">
-      <h2 className="text-2xl font-bold mb-4 text-center">Search People</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Advanced Search to Alumni</h2>
 
       <div className="mb-4">
         <label htmlFor="searchInput" className="block text-sm font-medium text-gray-600">

@@ -18,8 +18,8 @@ const SendMail = () => {
     <div className="flex justify-center items-center h-screen">
       <form onSubmit={(e) => e.preventDefault()} className="w-full max-w-md">
         <div className="px-8 pt-6 pb-8 mb-4">
-        <h2 className="my-3 text-center text-2xl font-semibold text-gray-900">
-  Send Mail to Students
+        <h2 className="my-3 text-2xl font-bold mb-4 text-center">
+  Send Mail to Alumni
 </h2>
 
           <div className="mb-4">
