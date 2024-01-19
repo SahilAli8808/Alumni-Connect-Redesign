@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaForward, FaShare } from 'react-icons/fa';
 import Select from 'react-select';
 // import { connect } from 'react-redux';
 
@@ -17,12 +18,12 @@ const SendMail = () => {
     <div className="flex justify-center items-center h-screen">
       <form onSubmit={(e) => e.preventDefault()} className="w-full max-w-md">
         <div className="px-8 pt-6 pb-8 mb-4">
-        <h2 className="my-3 text-center text-2xl font-bold text-gray-900">
+        <h2 className="my-3 text-center text-2xl font-semibold text-gray-900">
   Send Mail to Students
 </h2>
 
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-gray-700 text-sm font-semibold mb-2">
               College Name
             </label>
             <Select
@@ -35,7 +36,7 @@ const SendMail = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-gray-700 text-sm font-semibold mb-2">
               Batch
             </label>
             <Select
@@ -48,7 +49,7 @@ const SendMail = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-gray-700 text-sm font-semibold mb-2">
               Branch
             </label>
             <Select
@@ -61,7 +62,7 @@ const SendMail = () => {
           </div>
 
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-gray-700 text-sm font-semibold mb-2">
               Subject
             </label>
             <input
@@ -74,7 +75,7 @@ const SendMail = () => {
           </div>
 
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-gray-700 text-sm font-semibold mb-2">
               Message
             </label>
             <textarea
@@ -91,8 +92,8 @@ const SendMail = () => {
               type="submit"
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              {/* <AcademicCapIcon className="h-5 w-5 text-white  group-hover:text-indigo-400 " aria-hidden="true" /> */}
                Send Mail
+              <FaShare className="inline-block ml-2 mt-1" />
             </button>
           </div>
         </div>

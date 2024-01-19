@@ -20,9 +20,9 @@ const BulkUpload = () => {
   };
 
   return (
-    <div className="max-w-md my-20 mx-auto p-6 bg-white rounded-md shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Bulk Upload</h2>
-      <div className="mb-4">
+    <div className="max-w-md my-20 mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-4 text-center">Bulk Upload</h2>
+      <div className="mb-4 ">
         <label htmlFor="fileInput" className="block text-sm font-medium text-gray-600">
           Choose a file
         </label>
@@ -30,7 +30,7 @@ const BulkUpload = () => {
           id="fileInput"
           type="file"
           accept=".csv, .xlsx, .xls"
-          className="mt-1 p-2 border border-gray-300 rounded-md"
+          className="mt-1 p-2 border w-full border-gray-300 rounded-md"
           onChange={handleFileChange}
         />
       </div>
@@ -43,10 +43,11 @@ const BulkUpload = () => {
       )}
 
       <button
-        className="bg-black hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className=" w-full flex items-center justify-center  py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    
         onClick={handleUpload}
       >
-      <FaUpload className="inline-block mr-2" />
+      <FaUpload className="inline-block mr-2 mt-1" />
         Upload
 
       </button>
