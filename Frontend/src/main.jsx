@@ -17,6 +17,7 @@ import Layout from './Layout.jsx';
 import Login from './pages/Login.jsx';
 import Dashboard from './Components/Dashboard.jsx';
 import Home from './Components/Home.jsx';
+import Event from './Components/Event.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <Dashboard />,
+      },
+
+      {
+        path: "events",
+        element: <Event />,
       },
       // {
       //   path: "/logout",
