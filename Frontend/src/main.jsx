@@ -22,6 +22,7 @@ import Jobs from "./Components/Jobs.jsx";
 import SendMail from "./Components/SendMail.jsx";
 import BulkUpload from "./Components/BulkUpload.jsx";
 import SearchPeople from "./Components/SearchPeople.jsx";
+import Meeting from "./Components/Meeting.jsx";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "/search-people",
         element: <SearchPeople />,
+      },
+      {
+        path: "/meeting",
+        element: <Meeting />,
       },
     ],
   },

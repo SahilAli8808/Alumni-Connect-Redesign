@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaCalendar, FaBriefcase, FaNewspaper, FaEnvelope, FaUserTie, FaSearch, FaCommentDots, FaTicketAlt, FaEnvelopeOpenText, FaUserGraduate, FaSignInAlt, FaUpload } from 'react-icons/fa';
+import { FaHome, FaCalendar, FaBriefcase, FaNewspaper, FaEnvelope, FaUserTie, FaSearch, FaCommentDots, FaTicketAlt, FaEnvelopeOpenText, FaUserGraduate, FaSignInAlt, FaUpload, FaMeetup, FaVideo } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getLoggedIn } from '../services/authService';
@@ -39,6 +39,9 @@ function Topbar() {
         </Link>
         <Link to="/newsletter" className="text-sm font-semibold  flex items-center">
           <FaNewspaper className="mr-1" /> Newsletters
+        </Link>
+        <Link to="/meeting" className="text-sm font-semibold  flex items-center">
+          <FaVideo className="mr-1" /> Meeting
         </Link>
         <Link to="/bulk-upload" className="text-sm font-semibold  flex items-center">
           <FaUpload className="mr-1" /> Bulk Upload
