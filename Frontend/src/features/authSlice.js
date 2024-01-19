@@ -3,8 +3,8 @@
 // unique id ke lie uuid ya nanoid use karna
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 const initialState = {
-    currentUser: {},
-    loggedIn: false,
+    currentUser: null,
+    loggedIn: false
     // role: "",
     
 };
@@ -18,7 +18,7 @@ const authSlice = createSlice({
             // state hota hai current state | jo ki ek object hai aur usme status aur userData hai
             // action hota hai jo ki ek object hai aur usme type aur payload hai
             state.loggedIn = true;
-            state.currentUser = action.payload.currentUser;
+            state.currentUser = action.payload;
             // state.role = action.payload.role;
         },
         // reducers
@@ -28,7 +28,7 @@ const authSlice = createSlice({
         // actions are dispatched by calling
         logout: (state, action)=>{
             state.loggedIn = false;
-            state.currentUser = {};
+            state.currentUser = null;
             // state.role = "";
         }
 

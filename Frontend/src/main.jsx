@@ -15,6 +15,7 @@ import store from './store/store';
 import Register from './pages/Register.jsx';
 import Layout from './Layout.jsx';
 import Login from './pages/Login.jsx';
+import Dashboard from './Components/Dashboard.jsx';
 import Home from './Components/Home.jsx';
 
 const router = createBrowserRouter([
@@ -27,13 +28,21 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: "home",
+        element: <Home />,
+      },
+      {
         path: "login",
         element: <Login />,
       },
       {
         path: "dashboard",
-        element: <Home />,
+        element: <Dashboard />,
       },
+      // {
+      //   path: "/logout",
+      //   element: <Home />,
+      // },
     ],
     
   },

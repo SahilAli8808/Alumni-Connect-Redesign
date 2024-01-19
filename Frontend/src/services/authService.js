@@ -2,25 +2,13 @@
 import { useSelector } from "react-redux";
 
 function getUserData(){
-  const currectUser = useSelector(
-        // iske andar state ki current value aati hai
-        (state)=>{
-            state.currectUser
-        }
-    )
-console.log(currectUser)
-    return currectUser
+  return useSelector((state)=>state.currentUser) 
 }
 
 function getLoggedIn(){
  
-  const loggedIn = useSelector(
-        // iske andar state ki current value aati hai
-        (state)=>{
-            state.loggedIn
-        }
-    )
-    console.log(loggedIn)
+  const loggedIn = useSelector((state)=>{return state.loggedIn})
+    console.log("Logged in?",loggedIn)
 
     return loggedIn
 }

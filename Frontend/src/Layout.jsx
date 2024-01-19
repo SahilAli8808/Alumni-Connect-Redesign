@@ -1,14 +1,21 @@
 import React from 'react'
 import Topbar from './Components/Topbar'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import Footer from './Components/Footer'
+import { getLoggedIn } from './services/authService'
+import { ToastContainer } from 'react-toastify'
 
 function Layout() {
+  const loggedIn = getLoggedIn();
   return (
     <>
-      <Topbar/>
-      <Outlet/>
-      <Footer/>
+      <ToastContainer/>
+  
+      <Topbar />
+      <Outlet />
+     
+
+      <Footer />
     </>
   )
 }

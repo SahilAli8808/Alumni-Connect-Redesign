@@ -24,7 +24,7 @@ function Footer() {
           </a>
         </div>
       </div>
-      <hr className="my-4 border-gray-300" />
+      <hr className="my-4 border-gray-200" />
       <div className="text-center text-sm">
         <p>&copy; 2024 Alumni Connect. All rights reserved.</p>
       </div>
