@@ -20,6 +20,7 @@ import Home from "./Components/Home.jsx";
 import Event from "./Components/Event.jsx";
 import Jobs from "./Components/Jobs.jsx";
 import SendMail from "./Components/SendMail.jsx";
+import BulkUpload from "./Components/BulkUpload.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/send-mail",
         element: <SendMail />,
+      },
+      {
+        path: "/bulk-upload",
+        element: <BulkUpload />,
       },
     ],
   },
