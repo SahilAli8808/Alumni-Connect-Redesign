@@ -18,6 +18,8 @@ import Login from './pages/Login.jsx';
 import Dashboard from './Components/Dashboard.jsx';
 import Home from './Components/Home.jsx';
 import Event from './Components/Event.jsx';
+import Jobs from './Components/Jobs.jsx';
+import SendMail from './Components/SendMail.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+      {
+        path: "",
+        element: <Home />,
       },
       {
         path: "home",
@@ -45,10 +51,14 @@ const router = createBrowserRouter([
         path: "events",
         element: <Event />,
       },
-      // {
-      //   path: "/logout",
-      //   element: <Home />,
-      // },
+      {
+        path: "/jobs",
+        element: <Jobs />,
+      },
+      {
+        path: "/send-mail",
+        element: <SendMail />,
+      },
     ],
     
   },
