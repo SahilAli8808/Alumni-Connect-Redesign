@@ -1,5 +1,21 @@
 # Alumni-Connect
-This repo is the modified version of our mini project.
+Alumni Connect is a web application designed to enhance connections within alumni communities. It provides a platform for organizing events, sharing job opportunities, and facilitating communication among alumni.
+
+## Key Features
+
+- **Create Events:** Easily organize and manage alumni events.
+- **Post Jobs:** Share career opportunities tailored for alumni.
+- **Publish Newsletters:** Keep the community informed with regular updates.
+- **Auto-Delete Notices:** Efficiently manage time-sensitive announcements.
+- **Bulk Import Alumni:** Streamline onboarding with Excel sheet integration.
+- **Powerful Search:** Find alumni using filters like name, year, and location.
+- **Email Targeting:** Send emails to targeted alumni groups.
+- **Analytics Dashboard:** Visualize engagement with intuitive graphs.
+- **Real-Time Chat Rooms:** Foster dynamic conversations among alumni.
+- **Fundraising:** Enable crowdfunding for various initiatives.
+- **Add Faculties:** Connect with current and former faculty members.
+- **Verify Alumni:** Maintain trust with a verification process.
+- **Support Tickets:** Address alumni needs with efficient support.
 
 ## Getting Started
 <!-- Sreenshot -->
