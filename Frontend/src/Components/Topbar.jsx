@@ -16,30 +16,41 @@ function Topbar() {
   Alumni Connect</h2>
 </div>
 
-      <nav className="flex space-x-4 items-center">
+      <nav className="flex space-x-4 font-semibold  items-center">
+       {loggedIn ? (
+        <>
+        <Link to="/dashboard" className="text-sm flex items-center">
+          <FaHome className="mr-1" /> Dashboard
+        </Link>
+        </>
+       ): (
+        <>
         <Link to="/home" className="text-sm flex items-center">
           <FaHome className="mr-1" /> Home
         </Link>
-        <Link to="/events" className="text-sm flex items-center">
+        </>
+       )}
+      
+        <Link to="/events" className="text-sm font-semibold  flex items-center">
           <FaCalendar className="mr-1" /> Events
         </Link>
-        <Link to="/jobs" className="text-sm flex items-center">
+        <Link to="/jobs" className="text-sm font-semibold  flex items-center">
           <FaBriefcase className="mr-1" /> Jobs
         </Link>
-        <Link to="/news" className="text-sm flex items-center">
+        <Link to="/news" className="text-sm font-semibold  flex items-center">
           <FaNewspaper className="mr-1" /> News
         </Link>
-        <Link to="/bulk-upload" className="text-sm flex items-center">
+        <Link to="/bulk-upload" className="text-sm font-semibold  flex items-center">
           <FaUpload className="mr-1" /> Bulk Upload
         </Link>
         {/* <Link to="/interview" className="text-sm flex items-center">
           <FaUserTie className="mr-1" /> Interview
         </Link> */}
-        <Link to="/search-people" className="text-sm flex items-center">
+        <Link to="/search-people" className="text-sm font-semibold flex items-center">
           <FaSearch className="mr-1" /> Search People
         </Link>
       
-        <Link to="/send-mail" className="text-sm flex items-center">
+        <Link to="/send-mail" className="text-sm font-semibold  flex items-center">
           <FaEnvelopeOpenText className="mr-1" /> Send Mail
         </Link>
 
