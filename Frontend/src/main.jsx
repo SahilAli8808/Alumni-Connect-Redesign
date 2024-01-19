@@ -19,6 +19,7 @@ import Dashboard from "./Components/Dashboard.jsx";
 import Home from "./Components/Home.jsx";
 import Event from "./Components/Event.jsx";
 import Jobs from "./Components/Jobs.jsx";
+import SendMail from "./Components/SendMail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/jobs",
         element: <Jobs />,
+      },
+      {
+        path: "/send-mail",
+        element: <SendMail />,
       },
     ],
   },
