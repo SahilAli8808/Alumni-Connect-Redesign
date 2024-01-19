@@ -44,13 +44,13 @@ function Topbar() {
           <FaVideo className="mr-1" /> Meeting
         </Link>
         <Link to="/bulk-upload" className="text-sm font-semibold  flex items-center">
-          <FaUpload className="mr-1" /> Bulk Upload
+          <FaUpload className="mr-1" /> Bulk Import
         </Link>
         {/* <Link to="/interview" className="text-sm flex items-center">
           <FaUserTie className="mr-1" /> Interview
         </Link> */}
         <Link to="/search-people" className="text-sm font-semibold flex items-center">
-          <FaSearch className="mr-1" /> Search People
+          <FaSearch className="mr-1" /> Search Alumni
         </Link>
       
         <Link to="/send-mail" className="text-sm font-semibold  flex items-center">

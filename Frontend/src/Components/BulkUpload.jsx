@@ -21,7 +21,7 @@ const BulkUpload = () => {
 
   return (
     <div className="max-w-md my-20 mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4 text-center">Bulk Upload to Register Alumni</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Bulk Import Alumni to Register </h2>
       <div className="mb-4 ">
         <label htmlFor="fileInput" className="block text-sm font-medium text-gray-600">
           Choose a file
