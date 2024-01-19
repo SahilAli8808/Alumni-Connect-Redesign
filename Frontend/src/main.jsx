@@ -50,10 +50,10 @@ const router = createBrowserRouter([
         path: "events",
         element: <Event />,
       },
-      // {
-      //   path: "/logout",
-      //   element: <Home />,
-      // },
+      {
+        path: "/jobs",
+        element: <Jobs />,
+      },
     ],
   },
   {
