@@ -22,8 +22,8 @@ const Feedback = () => {
   const agreeDisagreeOptions = ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'];
 
   return (
-    <div className="container mx-auto p-6 bg-white rounded-md shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Feedback</h2>
+    <div className="container-sm mx-40 p-6">
+      <h2 className="text-2xl font-bold mb-4">Provide your Valueable Feedback & Suggestions</h2>
 
       {/* Experience Rating */}
       <div className="mb-4">
@@ -34,7 +34,7 @@ const Feedback = () => {
           max="5"
           value={experienceRating}
           onChange={(e) => setExperienceRating(parseInt(e.target.value))}
-          className="mt-2 appearance-none h-3 bg-black rounded-md focus:outline-none focus:shadow-outline"
+          className="mt-2 w-1/2 h-3 bg-black rounded-md focus:outline-none focus:shadow-outline"
           
         />
         <span className="text-lg font-semibold">{experienceRating}</span>
