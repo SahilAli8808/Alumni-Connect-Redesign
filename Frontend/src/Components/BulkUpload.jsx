@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaUpload } from 'react-icons/fa';
 import { getLoggedIn } from '../services/authService';
-import { Link } from 'react-router-dom';
+import NotLoggedIn from './NotLoggedIn';
 
 const BulkUpload = () => {
   const loggedIn = getLoggedIn();
@@ -58,18 +58,7 @@ const BulkUpload = () => {
       </button>
     </div>
   ) : (
-    <div className="text-center">
-      <h1 className="text-4xl font-bold mb-4">You're Not Logged In</h1>
-      <p className="text-gray-600 mb-4">
-        Please log in to access our bulk upload tab.
-      </p>
-      <Link
-        to="/login"
-        className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium"
-      >
-        Login
-      </Link>
-    </div>
+    <NotLoggedIn text="Bulk Import"/>
   )}
   </div>
   );

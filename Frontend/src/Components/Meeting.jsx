@@ -60,7 +60,7 @@ const VideoConference = () => {
       </div>
   ): (
     <div className="text-center">
-      <h1 className="text-4xl font-bold mb-4">You're Not Logged In</h1>
+      <h1 className="text-4xl font-bold mb-auto">You're Not Logged In</h1>
       <p className="text-gray-600 mb-4">
         Please log in to access our meeting tab.
       </p>
