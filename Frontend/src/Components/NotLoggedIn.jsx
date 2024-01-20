@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { getLoggedIn } from '../services/authService';
+// import { toast, ToastContainer } from 'react-toastify';
+
+
 
 function NotLoggedIn(props) {
+    // toast.error('Please log in to access this page');
   return (
     <>
+    {/* <ToastContainer/> */}
       <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">You're Not Logged In</h1>
           <p className="text-gray-600 mb-4">Please log in to access our {props.text} Tab.</p>
