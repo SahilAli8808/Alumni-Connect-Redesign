@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getLoggedIn } from '../services/authService';
 import { logout } from '../features/authSlice';
+import Dropdown from './Dropdown';
 
 function Topbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,9 +50,10 @@ function Topbar() {
         <Link to="/jobs" className="text-sm font-semibold flex items-center">
           <FaBriefcase className="mr-1" /> Jobs
         </Link>
-        <Link to="/newsletter" className="text-sm font-semibold flex items-center">
+        {/* <Link to="/newsletter" className="text-sm font-semibold flex items-center">
           <FaNewspaper className="mr-1" /> Newsletters
-        </Link>
+        </Link> */}
+        <Dropdown />
         <Link to="/meeting" className="text-sm font-semibold flex items-center">
           <FaVideo className="mr-1" /> Meeting
         </Link>
@@ -93,6 +95,7 @@ function Topbar() {
             >
               Login
             </Link>
+            
           </>
         )}
       </nav>
