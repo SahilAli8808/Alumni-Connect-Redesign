@@ -7,6 +7,7 @@ const loginController = async (req, res) => {
     try{
         const { email, password, role } = req.body;
         console.log(req.body);
+        
         if (role === 'alumni') {
             const alumni = await Alumni.findOne({email});
             if (!alumni) {

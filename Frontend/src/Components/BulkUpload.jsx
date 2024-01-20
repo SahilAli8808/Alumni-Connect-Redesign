@@ -12,8 +12,8 @@ const BulkUpload = () => {
     setSelectedFile(file);
   };
 
-  const handleUpload = () => {
- 
+  const handleUpload = async () => {
+    
     if (selectedFile) {
       console.log('File uploaded:', selectedFile);
     
@@ -26,6 +26,7 @@ const BulkUpload = () => {
     <div className="max-w-md my-20 mx-auto p-6">
       {loggedIn ? (
         <div>
+        <form onClick={handleUpload} encType='multipart/form-data' >
         <h2 className="text-2xl font-bold mb-4 text-center">Bulk Import Alumni to Register </h2>
         <div className="mb-4 ">
         <label htmlFor="fileInput" className="block text-sm font-medium text-gray-600">
@@ -49,13 +50,15 @@ const BulkUpload = () => {
 
       <button
         className=" w-full flex items-center justify-center  py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-    
-        onClick={handleUpload}
+        type='submit'
+        // onClick={handleUpload}
       >
       <FaUpload className="inline-block mr-2 mt-1" />
         Upload
 
       </button>
+    </form>
+      
     </div>
   ) : (
     <NotLoggedIn text="Bulk Import"/>
