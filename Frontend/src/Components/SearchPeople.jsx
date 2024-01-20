@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { getLoggedIn } from "../services/authService";
+import { Link } from "react-router-dom";
 
 const SearchPeople = () => {
+  const loggedIn = getLoggedIn();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedBatch, setSelectedBatch] = useState('');
   const [selectedYear, setSelectedYear] = useState('');
@@ -20,6 +23,8 @@ const SearchPeople = () => {
 
   return (
     <div className="max-w-md mx-auto my-2 p-6 ">
+      {loggedIn ? (
+        <div>
       <h2 className="text-2xl font-bold mb-4 text-center">Advanced Search to Alumni</h2>
 
       <div className="mb-4">
@@ -101,6 +106,21 @@ const SearchPeople = () => {
         </div>
       )}
     </div>
+  ) : (
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">You're Not Logged In</h1>
+      <p className="text-gray-600 mb-4">
+        Please log in to access our search tab.
+      </p>
+      <Link
+        to="/login"
+        className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium"
+      >
+        Login
+      </Link>
+    </div>
+  )}
+  </div>
   );
 };
 

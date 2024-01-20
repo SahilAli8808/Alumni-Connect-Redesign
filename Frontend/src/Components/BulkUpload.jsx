@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { FaUpload } from 'react-icons/fa';
+import { getLoggedIn } from '../services/authService';
+import { Link } from 'react-router-dom';
 
 const BulkUpload = () => {
+  const loggedIn = getLoggedIn();
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (e) => {
@@ -21,8 +24,10 @@ const BulkUpload = () => {
 
   return (
     <div className="max-w-md my-20 mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4 text-center">Bulk Import Alumni to Register </h2>
-      <div className="mb-4 ">
+      {loggedIn ? (
+        <div>
+        <h2 className="text-2xl font-bold mb-4 text-center">Bulk Import Alumni to Register </h2>
+        <div className="mb-4 ">
         <label htmlFor="fileInput" className="block text-sm font-medium text-gray-600">
           Choose a file
         </label>
@@ -52,6 +57,21 @@ const BulkUpload = () => {
 
       </button>
     </div>
+  ) : (
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">You're Not Logged In</h1>
+      <p className="text-gray-600 mb-4">
+        Please log in to access our bulk upload tab.
+      </p>
+      <Link
+        to="/login"
+        className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium"
+      >
+        Login
+      </Link>
+    </div>
+  )}
+  </div>
   );
 };
 

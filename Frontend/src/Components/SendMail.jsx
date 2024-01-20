@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaForward, FaShare } from 'react-icons/fa';
 import Select from 'react-select';
+import { getLoggedIn } from '../services/authService';
+import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 
 const SendMail = () => {
+  const loggedIn = getLoggedIn();
   const [countryList, setCountryList] = useState([]);
   const [selected, setSelected] = useState(null);
   const [cityListState, setCityListState] = useState([]);
@@ -16,6 +19,9 @@ const SendMail = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
+      <div className="flex flex-col items-center justify-center h-screen">
+        {loggedIn ? (
+          <div>
       <form onSubmit={(e) => e.preventDefault()} className="w-full max-w-md">
         <div className="px-8 pt-6 pb-8 mb-4">
         <h2 className="my-3 text-2xl font-bold mb-4 text-center">
@@ -99,6 +105,22 @@ const SendMail = () => {
         </div>
       </form>
     </div>
+  ): (
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">You're Not Logged In</h1>
+      <p className="text-gray-600 mb-4">
+        Please log in to access our send mail tab.
+      </p>
+      <Link
+        to="/login"
+        className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium"
+      >
+        Login
+      </Link>
+    </div>
+  )}
+  </div>
+  </div>
   );
 };
 
