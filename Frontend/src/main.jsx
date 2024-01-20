@@ -24,6 +24,7 @@ import SendMail from "./Components/SendMail.jsx";
 import BulkUpload from "./Components/BulkUpload.jsx";
 import SearchPeople from "./Components/SearchPeople.jsx";
 import Meeting from "./Components/Meeting.jsx";
+import Feedback from "./Components/Feedback.jsx";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/meeting",
         element: <Meeting />,
+      },
+      {
+        path: "/feedback",
+        element: <Feedback />,
       },
     ],
   },
