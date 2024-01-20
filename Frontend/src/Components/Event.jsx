@@ -13,10 +13,7 @@ function Event() {
       {loggedIn ? (
         <h1 className="text-4xl font-bold mb-4">Event</h1>
       ) : (
-        <>
-          
-          <NotLoggedIn text="Event" />
-        </>
+        <NotLoggedIn text="Event" />
       )}
     </div>
   );
