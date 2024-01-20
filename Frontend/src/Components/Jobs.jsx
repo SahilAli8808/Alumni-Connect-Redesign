@@ -1,7 +1,7 @@
 import React from "react";
 import { getLoggedIn } from "../services/authService";
 import { Link } from "react-router-dom";
-import NotLoggedIn from "./NotLoggedIn";
+import NotLoggedIn from "./helper/NotLoggedIn";
 
 function Jobs() {
   const loggedIn = getLoggedIn();

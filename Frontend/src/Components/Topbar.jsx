@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getLoggedIn } from '../services/authService';
 import { logout } from '../features/authSlice';
-import Dropdown from './Dropdown';
+import Dropdown from './helper/Dropdown';
 
 function Topbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);

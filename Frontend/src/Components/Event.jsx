@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { getLoggedIn } from '../services/authService';
 import { Link } from 'react-router-dom';
-import NotLoggedIn from './NotLoggedIn';
+import NotLoggedIn from './helper/NotLoggedIn';
 import { ToastContainer, toast } from 'react-toastify';
 // Replace with the actual path
 

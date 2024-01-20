@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { getLoggedIn } from '../services/authService';
+import { getLoggedIn } from '../../services/authService';
 import { toast, ToastContainer } from 'react-toastify';
 import noDataIllustration from '../assets/img/no_data.svg';  
 import { useEffect } from 'react';

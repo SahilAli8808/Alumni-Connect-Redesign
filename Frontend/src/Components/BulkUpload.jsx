@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaUpload } from 'react-icons/fa';
 import { getLoggedIn } from '../services/authService';
-import NotLoggedIn from './NotLoggedIn';
+import NotLoggedIn from './helper/NotLoggedIn';
 
 const BulkUpload = () => {
   const loggedIn = getLoggedIn();
