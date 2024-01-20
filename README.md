@@ -19,7 +19,7 @@ Alumni Connect is a web application designed to enhance connections within alumn
 
 ## Getting Started
 <!-- Sreenshot -->
-![Screenshot](https://github.com/SahilAli8808/Alumni-Connect/blob/main/Frontend/src/assets/img/screenshots.jpg)
+![Screenshot](https://github.com/Kumailrizvi786/Alumni-Connect/blob/main/Frontend/src/assets/img/screenshots.jpg)
 <!-- Sreenshot -->
 ### Prerequisites
 * [Node.js](https://nodejs.org/en/download/)
@@ -29,6 +29,10 @@ Alumni Connect is a web application designed to enhance connections within alumn
 1. Clone the repo
 ```sh
 git clone https://github.com/SahilAli8808/Alumni-Connect.git
+```
+or 
+```sh
+git clone https://github.com/Kumailrizvi786/Alumni-Connect.git
 ```
 1.2 Change directory
 ```sh   
@@ -71,7 +75,8 @@ npm start
 * [Mongoose](https://mongoosejs.com/)
 
 ## Authors
-* [**Sahil Ali**](    )
+* [**Sahil Ali**](https://www.linkedin.com/in/sahilali20/)
+* [**Syed Kumail Rizvi**](https://www.linkedin.com/in/syed-kumail-rizvi/)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
