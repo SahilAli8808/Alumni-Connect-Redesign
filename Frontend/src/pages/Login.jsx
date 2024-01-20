@@ -14,6 +14,7 @@ function Login() {
   const [user, setUser] = useState({
     email: "",
     password: "",
+    role: selectedRole,
   });
   const dispatch = useDispatch();
   // Options for the role dropdown
@@ -34,7 +35,7 @@ function Login() {
   // console.log(userRole)
 
   var role = userRole;
-  // console.log(role)
+  console.log(role);
   var userData = {
     email: user.email,
     password: user.password,
@@ -57,8 +58,15 @@ function Login() {
     try {
       const response = await axios.post(url, userData);
       console.log("Axios Response:", response);
-      console.log("Axios Data in store:", response.data.alumni);
-      dispatch(login(response.data.alumni));
+      console.log("Axios Data in store:", response.data);
+      const payload = {
+        ...(selectedRole.value === "alumni"
+          ? response.data.alumni
+          : response.data.admin),
+        role: selectedRole.value,
+      };
+
+      dispatch(login(payload));
       toast.success("Login Successful");
 
       setLoading(false);
