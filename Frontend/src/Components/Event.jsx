@@ -1,7 +1,7 @@
-import React from 'react';
-import { getLoggedIn } from '../services/authService';
-import { Link } from 'react-router-dom';
-import NotLoggedIn from './NotLoggedIn';
+import React from "react";
+import { getLoggedIn } from "../services/authService";
+// import { Link } from "react-router-dom";
+import NotLoggedIn from "./NotLoggedIn";
 
 function Event() {
   const loggedIn = getLoggedIn();
@@ -11,7 +11,7 @@ function Event() {
       {loggedIn ? (
         <h1 className="text-4xl font-bold mb-4">Event</h1>
       ) : (
-       <NotLoggedIn text="Event"/>
+        <NotLoggedIn text="Event" />
       )}
     </div>
   );
