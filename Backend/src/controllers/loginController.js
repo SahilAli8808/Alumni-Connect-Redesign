@@ -1,5 +1,6 @@
-const Alumni = require("../models/alumniModel");
-const { Admin } = require("../models/adminModel");
+// const Alumni = require("../models/alumniModel");
+// const { Admin } = require("../models/adminModel");
+const { User } = require("../models/user");
 // const {College} = require('../models/collegeModel');
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
@@ -8,7 +9,11 @@ const loginController = async (req, res) => {
     const { email, password, role } = req.body;
     console.log(req.body);
     if (role === "alumni") {
-      const alumni = await Alumni.findOne({ email });
+      const alumni = await User.findOne({
+        email,
+        role: "alumni",
+        isApproved: true,
+      });
       if (!alumni) {
         res.status(404).json({
           status: "fail",
@@ -38,7 +43,11 @@ const loginController = async (req, res) => {
         }
       }
     } else if (role === "admin") {
-      const admin = await Admin.findOne({ email });
+      const admin = await User.findOne({
+        email,
+        role: "admin",
+        isApproved: true,
+      });
       if (!admin) {
         res.status(404).json({
           status: "fail",
@@ -46,11 +55,19 @@ const loginController = async (req, res) => {
         });
       } else {
         if (admin.password === password) {
+          // generate token
+          const token = jwt.sign({ id: admin._id }, process.env.JWT_SECRET, {
+            expiresIn: process.env.JWT_EXPIRES_IN,
+          });
+          res.cookie("jwt", token, {
+            expires: new Date(
+              Date.now() +
+                process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+            ),
+            httpOnly: true,
+          });
           res.status(200).json({
-            status: "success",
-            data: {
-              admin,
-            },
+            admin,
           });
         } else {
           res.status(401).json({
@@ -68,11 +85,19 @@ const loginController = async (req, res) => {
         });
       } else {
         if (college.password === password) {
+          // generate token
+          const token = jwt.sign({ id: college._id }, process.env.JWT_SECRET, {
+            expiresIn: process.env.JWT_EXPIRES_IN,
+          });
+          res.cookie("jwt", token, {
+            expires: new Date(
+              Date.now() +
+                process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+            ),
+            httpOnly: true,
+          });
           res.status(200).json({
-            status: "success",
-            data: {
-              college,
-            },
+            college,
           });
         } else {
           res.status(401).json({
