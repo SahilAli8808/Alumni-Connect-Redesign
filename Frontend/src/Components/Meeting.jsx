@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { getLoggedIn } from "../services/authService";
+import { Link } from "react-router-dom";
 
 const VideoConference = () => {
+
+  const loggedIn = getLoggedIn();
   const [meetingLink, setMeetingLink] = useState('');
 
   const handleJoinMeeting = () => {
@@ -18,6 +22,8 @@ const VideoConference = () => {
 
   return (
     <div className="max-w-md my-12 mx-auto p-6 bg-white rounded-md shadow-md">
+      {loggedIn ? (
+        <div>
       <h2 className="text-2xl font-bold mb-4">Video Conference with Alumni</h2>
 
       <div className="mb-4">
@@ -51,7 +57,22 @@ const VideoConference = () => {
           Join Video Conference
         </button>
       </div>
+      </div>
+  ): (
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">You're Not Logged In</h1>
+      <p className="text-gray-600 mb-4">
+        Please log in to access our meeting tab.
+      </p>
+      <Link
+        to="/login"
+        className="bg-black text-white px-4 py-2 rounded-md text-sm font-medium"
+      >
+        Login
+      </Link>
     </div>
+  )}
+  </div>
   );
 };
 

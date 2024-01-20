@@ -19,6 +19,7 @@ import Dashboard from "./Components/Dashboard.jsx";
 import Home from "./Components/Home.jsx";
 import Event from "./Components/Event.jsx";
 import Jobs from "./Components/Jobs.jsx";
+import Newsletter from "./Components/NewsLetter.jsx";
 import SendMail from "./Components/SendMail.jsx";
 import BulkUpload from "./Components/BulkUpload.jsx";
 import SearchPeople from "./Components/SearchPeople.jsx";
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/jobs",
         element: <Jobs />,
+      },
+      {
+        path: "/newsletter",
+        element: <Newsletter />,
       },
       {
         path: "/send-mail",
