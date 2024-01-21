@@ -12,12 +12,17 @@ const loginController = async (req, res) => {
       const alumni = await User.findOne({
         email,
         role: "alumni",
-        isApproved: true,
       });
       if (!alumni) {
         res.status(404).json({
           status: "fail",
           message: "Alumni not found",
+        });
+      } else if (alumni.isApproved === false) {
+        res.status(403).json({
+          status: "fail",
+          message:
+            "Alumni not approved, Please contact the administrator for assistance.",
         });
       } else {
         if (alumni.password === password) {
@@ -52,6 +57,12 @@ const loginController = async (req, res) => {
         res.status(404).json({
           status: "fail",
           message: "Admin not found",
+        });
+      } else if (admin.isApproved === false) {
+        res.status(403).json({
+          status: "fail",
+          message:
+            "Alumni not approved, Please contact the administrator for assistance.",
         });
       } else {
         if (admin.password === password) {
