@@ -75,7 +75,7 @@ function Login() {
       setLoading(false);
       console.log("Handle error here:", err);
       if (err.response) {
-        toast.error(err.response.data.errorMessage || err.message);
+        toast.error(err.response.data.message || err.message);
       } else {
         toast.error(err.message + "! Database server is down.");
       }
