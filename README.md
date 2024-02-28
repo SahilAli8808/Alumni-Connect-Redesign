@@ -1,6 +1,10 @@
 # Alumni-Connect
 Alumni Connect is a web application designed to enhance connections within alumni communities. It provides a platform for organizing events, sharing job opportunities, and facilitating communication among alumni.
 
+# Old Version
+The old version of this Web Application was class component-based.
+* [Have a look](https://github.com/SahilAli8808/Alumni-Managment-System)
+
 ## Key Features
 
 - **Create Events:** Easily organize and manage alumni events.
