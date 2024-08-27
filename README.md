@@ -3,7 +3,7 @@ Alumni Connect is a web application designed to enhance connections within alumn
 
 # Old Version
 The old version of this Web Application was class component-based.
-* [Have a look](https://github.com/SahilAli8808/Alumni-Managment-System)
+* [Have a look](https://github.com/SahilAli8808/Alumni-Connects)
 
 ## Key Features
 
